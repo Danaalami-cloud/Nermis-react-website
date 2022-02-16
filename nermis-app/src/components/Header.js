@@ -26,16 +26,16 @@ export default class Navbar extends Component {
             </div>
             <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
             <li>
-            <Link smooth to="#home">Home</Link>
+            <Link  to="#home">Home</Link>
             </li>
             <li>
-            <Link smooth to="#about">About</Link>
+            <Link  to="#about">About</Link>
             </li>
             <li>
-            <Link smooth to="#product">Products</Link>
+            <Link  to="#products">Products</Link>
             </li>
             <li>
-            <link smooth to="#contact us">Contact us</link>
+            <Link  to="#contact us">Contact us</Link>
             </li>
             </ul>
             </div>

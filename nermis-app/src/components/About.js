@@ -3,8 +3,8 @@ import React from 'react';
 const About= () => {
     return (
         <div className="about" id="about">
-        <div classNAme="about-info">
-            <div classNAme="about-content">
+        <div className="about-info">
+            <div className="about-content">
                 <h1> Nermis Skin Food</h1>
                 <h4> It all started with an addiction, I've always been in love with skincare products, all kinds, and different brands.
 Body creams, hand lotions can be found in every room in my house, along with lip balms in my handbag and on the kitchen counter, next to the bed and just every where. I used to spend lots of money on brands, but I not always satisfied with the results.

@@ -1,11 +1,26 @@
-import React, {useState } from 'react';
+import React from 'react';
+import emailjs from 'emailjs-com';
 
+export default function Contact () {
+function sendEmail(e) {
+    e.preventDefault();
 
-function Contact() {
-    const [email, setEmail] = useState('');
-    const [firstName, setfirstName] = useState('');
-    const [lastName, setlastName] = useState('');
-    const [errorMessage, seterrorMessage] = useState('');
-
+    emailjs.sendForm('gmail', 'template_2ybqrfi', e.target, 'user_CMEFdYfib9B5KXwgkn7wC')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset()
 }
-export default Contact;
+return (
+    <form className="contact-form" onSubmit={sendEmail}>
+        <input type="name" name="name" />
+        <label>Full Name</label>
+        <input type="email" name="email" />
+        <label> Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+    </form>
+);
+}
