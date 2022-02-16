@@ -1,19 +1,34 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap');
 
-.App-logo {
+
+
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* :root {
+  --main-yellow: #cbb470f2;
+  --main-black: #272829;
+  --main-white: #dfddd6;
+  --main-font: 'Stardos Stencil', cursive;
+  --mainTransition: all 0.25s ease-in-out;
+  --mainSpacing: 2px;
+  --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
+  --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -21,18 +36,326 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
+  color: rgb(139, 194, 220);
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.navbar {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
+  background: rgba(204, 204, 204, 0.295);
+  z-index: 2;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition:var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  margin: 15px;
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: black;
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1.20rem;
+  font-weight: 600;
+  font-family:var(--copperplate);
+  letter-spacing:var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: rgb(238, 238, 238);
+}
+
+.show-nav {
+  height: 510px;
+}
+@media screnn and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 24em;
+    padding: 2.3rem 7rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+/*end of navbar */
+
+/* HERO */
+.overlay {
+  background: url('./images/herbal.png') center/cover;
+   /* height: 15rem; */
+  /* font-family: copperplate;
+  font-size: x-large; 
+   */
+}
+/*Hero */
+section {
+  width: 100%;
+  display: table;
+  margin-top: -30px;
+  max-width: none;
+  height: 100vh;
+}
+/*Hero */
+
+.intro {
+  height: 125vh;
+  padding-top: 30px;
+}
+/*Hero */
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 100;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  color:var(--mainwhite);
+  background: rgba(226, 99, 26, 0.035);
+}
+/*Hero */
+
+.content h1 {
+  background-color: var(--main-yellow);
+  padding-top: 8px;
+  font-family:var(--copperplate);
+  font-size: 50px;
+  line-height: 95px;
+  text-align: center;
+}
+/*Hero */
+
+.intro .content h4 {
+  padding-bottom: 30px;
+  text-align: center;
+/* background-color: var(--main-yellow); */
+font-family:var(--copperplate);
+}
+
+/* About */
+
+.about-info {
+ background-color: antiquewhite;
+ height: 100%;
+ width: 50%;
+ margin-left: 170px;
+ font-family: copperplate;
+ text-align: center;
+}
+
+.about-content h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.about-content h4 {
+  font-size: 19px;
+  padding: 15px 30px;
+  letter-spacing: .5px;
+}
+
+/* Fotter */
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background:var(--mainwhite);
+}
+
+.footer-distributed{
+  box-sizing: border-box;
+  width: 100%;
+  height: 345px;
+  text-align: left;
+  font-family: copperplate;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 50px 80px 10px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+  vertical-align: top;
+  margin-bottom: -25px;
+}
+
+.footer-distributed .footer-left{
+  width: 10%;
+  height: 170px;
+  text-align: left;
+  
+}
+.footer-left {
+  
+}
+
+.footer-distributed .footer-links{
+  color:  var(--font-color);
+  font-size: 1.3rem;
+  width: 35%;
+  font-weight: 500;
+  margin: 20px auto;
+}
+
+.footer-distributed .footer-links a{
+	display:block;
+	line-height: 1.55;
+  text-decoration: none;
+  margin: 4px;
+  color:  var(--font-color);
+  transition: var(--maintransition);
+}
+
+.footer-distributed .footer-links a:hover {
+  transform: scale(1.13);
+}
+
+.footer-distributed .footer-company-name{
+	color:  var(--font-color);
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-center{
+  font-family: var(--main-font);
+  width: 45%;
+  text-align: center;
+  padding-top: 10px;
+  height: 270px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: var(--font-color);
+	vertical-align: middle;
+  padding: 20px 35px;
+}
+
+.footer-center .part {
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: 20px;
+}
+
+.footer-distributed .footer-center .part a{
+	color:  var(--font-color);
+  text-decoration: none;
+  transition: var(--maintransition);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-distributed .footer-center .part a:hover {
+  color: var(--mainwhite);
+  opacity: 0.6;
+}
+
+.footer-distributed .footer-right{
+  width: 35%;
+  height: 180px;
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: 400;
+  padding: 10px;
+}
+
+.footer-distributed a:hover {
+  color: var(--mainwhite);
+}
+
+
+
+
+@media (max-width: 880px) {
+  footer {
+    margin-bottom: -585px;
+  }
+
+  .footer-distributed {
+    height: 49em;
+  }
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+  }
+  .footer-bottom {
+    margin-top: 25px;
+  }
+}
+
+footer .footer-bottom {
+  color:var(--font-color);
+  height: 45px;
+  font-family: var(--font-2);
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1px;
 }

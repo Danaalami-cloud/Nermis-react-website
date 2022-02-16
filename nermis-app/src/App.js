@@ -13,10 +13,10 @@ render() {
     <>
     <Header/>
     <Hero/>
-    <Footer/>
     <About/>
-    <Contact/>
     <Products/>
+    <Contact/>
+    <Footer/>
     </>
 
   );

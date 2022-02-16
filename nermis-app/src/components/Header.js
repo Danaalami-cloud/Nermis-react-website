@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../images/logo.jpeg"
+ import '../App.css'
+
 
 export default class Navbar extends Component {
     state= {
