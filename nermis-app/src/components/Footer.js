@@ -9,7 +9,7 @@ const Footer = () => {
      <footer className="footer-distributed" id="footer">
          <div className="footer-left">
              <Link to="home">
-                 <img src={logo} alt="NR" />
+                 {/* <img src={logo} alt="NR" /> */}
              </Link>
          </div>
          <div className="footer-center">
