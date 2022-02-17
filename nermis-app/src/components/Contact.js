@@ -51,14 +51,14 @@ return (
 <>
 <h1>Contact Me</h1>
 
-    <form className="contact-form" onSubmit={sendEmail}>
+    <form onSubmit={sendEmail}>  
         <input type="text" name="sender_name" value={sender_name} onChange={handleName} required placeholder="your name" />
-        <label>Full Name</label>
-        <input type="email" name="sender_email" value={sender_email} onChange={handleEmail} required placeholder="your email" />
-        <label> Email</label>
+        {/* <label>Full Name</label> */}
+        <input type="email" name="sender_email" value={sender_email} onChange={handleEmail} required placeholder="your email id" />
+        {/* <label> Email</label> */}
         <textarea name="message" value={message} onChange={handlemessage} required placeholder="your message" />
-        <label>Message</label>
-        <button type="submit" value="Send"> Send mail</button>
+        {/* <label>Message</label> */}
+        <button type="submit"> Send mail</button>
         
     </form>
     </>
