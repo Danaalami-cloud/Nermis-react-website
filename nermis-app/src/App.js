@@ -6,6 +6,8 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Products from './components/Products'
 import Contact from './components/Contact'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
 render() {
