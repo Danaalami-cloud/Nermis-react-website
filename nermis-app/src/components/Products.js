@@ -6,12 +6,11 @@ import BLhero1 from "../images/BLhero1.png"
 
 const Products = () => {
 return (
-    <Row xs={1} md={2} className="g-4" 
-    >
-    {/* <div className="welcome">
+     <div className="products">
         <h1>Welcome to my unique selection of Products</h1>
-        </div> */}
-      <Card style={{ width: '18rem'}}>
+        <div className="productrow">
+        <Row xs={1} md={2} className="g-4">
+      <Card style={{ width: '18rem', margin: '45px auto'}}>
         <Card.Img variant="top" src={BLhero1} />
         <Card.Body>
           <Card.Title>Blue Lagoon</Card.Title>
@@ -22,7 +21,8 @@ return (
           <Card.Link href="#">Card Link</Card.Link>
         </Card.Body>
       </Card>
-      <Card style={{ width: '18rem'}}>
+
+      <Card style={{ width: '18rem', margin: '45px auto'}}>
         <Card.Img variant="top" src={BLhero1} />
         <Card.Body>
           <Card.Title>Blue </Card.Title>
@@ -33,7 +33,7 @@ return (
           <Card.Link href="#">Card Link</Card.Link>
         </Card.Body>
       </Card>
-      <Card style={{ width: '18rem'}}>
+      <Card style={{ width: '18rem', margin: '45px auto'}}>
         <Card.Img variant="top" src={BLhero1} />
         <Card.Body>
           <Card.Title>Green</Card.Title>
@@ -44,9 +44,10 @@ return (
           <Card.Link href="#">Card Link</Card.Link>
         </Card.Body>
       </Card>
+      </Row>
+      </div>
+      </div>
     
-  
-</Row>
 )};
 
 

@@ -1,68 +1,66 @@
-import React from 'react';
-import { useState } from 'react';
-import emailjs, { send } from 'emailjs-com';
-import '../App.css'
+import React from "react";
+// import { useState } from 'react';
+import emailjs from "emailjs-com";
+import "../App.css";
 
+// const Contactus = () => {
+//     const [sender_name, set_sender_name] = useState('');
+//     const [sender_email, set_sender_email] = useState('');
+//     const [message, set_message] = useState('');
 
+// const handleName = (e) => {
+//     set_sender_name(e.target.value)
 
-    const Contactus = () => {
-        const [sender_name, set_sender_name] = useState('');
-        const [sender_email, set_sender_email] = useState('');
-        const [message, set_message] = useState('');
-        const handleName = (e) => {
-            set_sender_name(e.target.value)
+// }
 
-        }
+// const handleEmail = (e) => {
+//     set_sender_email(e.target.value)
+// }
 
-        const handleEmail = (e) => {
-            set_sender_email(e.target.value)
-        }
+// const handlemessage = (e) => {
+//     set_message(e.target.value)
+// }
+const Contactus = () => {
+  function sendEmail(e){
+    e.preventDefault();
+    emailjs.sendForm(
+        "service_ddju8xd",
+        "template_2ybqrfi",
+        e.target,
+        "user_CMEFdYfib9B5KXwgkn7wC"
+      ).then(res => {
+        console.log(res);
+      }).catch(err=> console.log(err));
+  }
 
-        const handlemessage = (e) => {
-            set_message(e.target.value)
-        }
-
-        const sendEmail = (e) => {
-            e.preventDefault(); 
-            send(
-                'service_ddju8xd',
-                'template_2ybqrfi',
-                {sender_name, sender_email, message},
-                'user_CMEFdYfib9B5KXwgkn7wC'
-            )
-            .then((response) => {
-                console.log('Message sent successfully', response.status, response.text)
-            })
-            .catch((err) => {
-                console.log('Failed', err)
-            })
-            set_sender_name('');
-            set_sender_email('');
-            set_message('');
-            
-
-        }
-
-
-
-
-
-return (
-<>
-<h1>Contact Me</h1>
-
-    <form onSubmit={sendEmail}>  
-        <input type="text" name="sender_name" value={sender_name} onChange={handleName} required placeholder="your name" />
-        {/* <label>Full Name</label> */}
-        <input type="email" name="sender_email" value={sender_email} onChange={handleEmail} required placeholder="your email id" />
-        {/* <label> Email</label> */}
-        <textarea name="message" value={message} onChange={handlemessage} required placeholder="your message" />
-        {/* <label>Message</label> */}
-        <button type="submit"> Send mail</button>
+  return (
+    <div
+      className="container border"
+      style={{ marginTop: "50px", width: "70%" }}
+    >
+      <h1 style={{ marginTop: "25px" }}>Contact Me</h1>
+      <form
+        className="row"
+        style={{ margin: "25px 85px 75px 100px" }}
+        onSubmit={sendEmail}
+      >
+        <label>Name</label>
+        <input type="text" name="name" className="form-control" />
         
-    </form>
-    </>
-);
-}
+        <label>Email</label>
+        <input type="email" name="user_email" className="form-control" />
+        
+        <label>Message</label>
+        <textarea name="message" rows="4" className="form-control" />
+        <input
+          type="submit"
+          value="Send"
+          className="form-control btn btn-primary"
+          style={{ marginTop: "30px" }}
+        />
+      </form>
+    </div>
+  );
+};
 
 export default Contactus;
