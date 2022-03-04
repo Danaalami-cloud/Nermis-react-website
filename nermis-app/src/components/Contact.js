@@ -1,7 +1,7 @@
 import React from "react";
 // import { useState } from 'react';
 import emailjs from "emailjs-com";
-import "../App.css";
+// import "../App.css";
 
 // const Contactus = () => {
 //     const [sender_name, set_sender_name] = useState('');
@@ -36,7 +36,13 @@ const Contactus = () => {
   return (
     <div
       className="container border"
-      style={{ marginTop: "50px", width: "70%" }}
+      style={{
+         marginTop: "50px", 
+         width: "70%",
+       backgroundImage: `url('https://www.heet.org.uk/wp-content/uploads/2016/06/gradient-background-26046-26731-hd-wallpapers.jpg.png')`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      }}
     >
       <h1 style={{ marginTop: "25px" }}>Contact Me</h1>
       <form

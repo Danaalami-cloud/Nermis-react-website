@@ -7,7 +7,7 @@ import About from './components/About'
 import Products from './components/Products'
 import Contact from './components/Contact'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 class App extends Component {
 render() {
