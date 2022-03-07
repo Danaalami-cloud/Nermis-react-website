@@ -4,36 +4,27 @@ import '../App.css'
 import logo from '../images/logo.jpeg'
 import {
     MDBFooter,
-    MDBContainer,
-    MDBCol,
-    MDBRow
 } from 'mdb-react-ui-kit';
 
 const Footer = () => {
  return (
-     <MDBFooter bgColor='Dark' className='text-center text-lg-center'>
-         <div className='text-white bg-info'>
-         <MDBContainer className='p-4'>
-             <MDBRow>
-                 <MDBCol lg='6' md='12' className='mb-4 mb-md-0 text-center'>
-                     
-                     <h5 className='text-uppercase'>Cheers for dropping by!</h5>
-                     <p>
-                         Thank you for supporting my business and don't hesistate to get in touch!
-                     </p>
-                   
-                 </MDBCol>
-             </MDBRow>
-         </MDBContainer>
-         <div className='text-center p-3'>
-             &copy; {new Date().getFullYear()} Copyright:by Dana Alami{''}
-             <a className='text-white bg-dark' >
-    
-             </a>
-         </div>
-         </div>
-     </MDBFooter>
- );
+<MDBFooter color="dark" bgColor='light'
+className='text-center text-lg-left'>
+    <hr className='footer-seperator' />
+    <h5 className='text-uppercase'>
+        Cheers for dropping by!
+    </h5>
+    <p>
+        For more enquiries about my products, 
+        send me an email, and I'll get back to you as soon as possible.
+        Thank you for supporting my business! 
+    </p>
+
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        © 2022 Copyright: By Dana Alami 
+      </div>
+    </MDBFooter>
+  );
 }
 
 

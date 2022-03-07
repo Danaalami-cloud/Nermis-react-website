@@ -24,10 +24,10 @@ const Contactus = () => {
   function sendEmail(e){
     e.preventDefault();
     emailjs.sendForm(
-        "service_ddju8xd",
-        "template_2ybqrfi",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        "user_CMEFdYfib9B5KXwgkn7wC"
+        process.env.REACT_APP_USER_ID
       ).then(res => {
         console.log(res);
       }).catch(err=> console.log(err));
@@ -37,8 +37,9 @@ const Contactus = () => {
     <div
       className="container border"
       style={{
-         marginTop: "50px", 
-         width: "70%",
+         marginTop: "60px", 
+         width: "85%",
+         height: "190%",
        backgroundImage: `url('https://www.heet.org.uk/wp-content/uploads/2016/06/gradient-background-26046-26731-hd-wallpapers.jpg.png')`,
       backgroundPosition: "center",
       backgroundSize: "cover",
