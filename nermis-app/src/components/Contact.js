@@ -3,23 +3,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 // import "../App.css";
 
-// const Contactus = () => {
-//     const [sender_name, set_sender_name] = useState('');
-//     const [sender_email, set_sender_email] = useState('');
-//     const [message, set_message] = useState('');
 
-// const handleName = (e) => {
-//     set_sender_name(e.target.value)
-
-// }
-
-// const handleEmail = (e) => {
-//     set_sender_email(e.target.value)
-// }
-
-// const handlemessage = (e) => {
-//     set_message(e.target.value)
-// }
 const Contactus = () => {
   function sendEmail(e){
     e.preventDefault();
@@ -29,7 +13,8 @@ const Contactus = () => {
         e.target,
         process.env.REACT_APP_USER_ID
       ).then(res => {
-        console.log(res);
+        console.log(res.text);
+        alert("Your message has been successfully sent! I will contact you soon!");
       }).catch(err=> console.log(err));
   }
 

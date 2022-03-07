@@ -20,6 +20,7 @@ html {
   background: rgba(204, 204, 204, 0.295);
   z-index: 2;
   font-family: copperplate;
+  height: 18%;
 }
 
 .nav-header {
@@ -53,7 +54,7 @@ html {
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: grey;
+  color: rgb(165, 121, 121);
   text-decoration: underline;
 }
 
@@ -122,18 +123,24 @@ section {
 .content h1 {
   background-color: var(--main-yellow);
   padding-top: 8px;
-  font-family:var(--copperplate);
-  font-size: 50px;
+  font-family:copperplate;
+  font-size: 60px;
   line-height: 95px;
   text-align: center;
+  /* margin-bottom: 120px; */
+  color: black;
+
 }
 /*Hero */
 
-.intro .content h4 {
+ .content h4 {
   padding-bottom: 30px;
   text-align: center;
 /* background-color: var(--main-yellow); */
-font-family:var(--copperplate);
+font-family: copperplate;
+margin-bottom: 120px;
+font-size: 50px;
+
 }
 
 /* About */

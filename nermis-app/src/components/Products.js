@@ -18,7 +18,7 @@ return (
             This is a longer card with supporting text below as a natural
             lead-in to additional content. This content is a little bit longer.
           </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
+          <Card.Link href="#" target="_blank" rel="noreferrer noopener">Card Link</Card.Link>
         </Card.Body>
       </Card>
 
