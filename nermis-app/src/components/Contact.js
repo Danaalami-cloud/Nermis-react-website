@@ -1,22 +1,32 @@
 import React from "react";
 // import { useState } from 'react';
 import emailjs from "emailjs-com";
-// import "../App.css";
-
+import Swal from 'sweetalert2';
 
 const Contactus = () => {
   function sendEmail(e){
     e.preventDefault();
-    emailjs.sendForm(
+    emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_USER_ID
-      ).then(res => {
-        console.log(res.text);
-        alert("Your message has been successfully sent! I will contact you soon!");
-      }).catch(err=> console.log(err));
-  }
+        // e.target,
+        process.env.REACT_APP_USER_ID)
+        .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        })
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+      });
+      e.target.reset()
+  };
 
   return (
     <div
