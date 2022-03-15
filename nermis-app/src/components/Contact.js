@@ -3,14 +3,15 @@ import React from "react";
 import emailjs from "emailjs-com";
 import Swal from 'sweetalert2';
 
+const API_USER_ID = process.env.REACT_APP_USER_ID;
+const API_SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const API_TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID; 
+// const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 const Contactus = () => {
   function sendEmail(e){
     e.preventDefault();
-    emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        // e.target,
-        process.env.REACT_APP_USER_ID)
+    emailjs.sendForm(
+      'service_ddju8xd', 'template_2ybqrfi', e.target, 'user_CMEFdYfib9B5KXwgkn7wC')
         .then((result) => {
         console.log(result.text);
         Swal.fire({

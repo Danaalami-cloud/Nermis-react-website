@@ -9,6 +9,9 @@ import Contact from './components/Contact'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
+console.log(process.env.REACT_APP_SERVICE_ID)
+console.log(process.env.REACT_APP_USER_ID)
+
 class App extends Component {
 render() {
   return (
